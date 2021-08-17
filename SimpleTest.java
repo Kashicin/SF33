@@ -1,3 +1,5 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -6,7 +8,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.net.URL;
-\\java -Dwebdriver.chrome.driver=D:\Git\Maven-id\chromedriver.exe -jar D:\Git\Maven-id\selenium-server-standalone-3.141.59.jar
+//java -Dwebdriver.chrome.driver=D:\Git\Maven-id\chromedriver.exe -jar D:\Git\Maven-id\selenium-server-standalone-3.141.59.jar
 public class SimpleTest {
     public RemoteWebDriver driver;
     private static final String SELENIUM_URL = "http://localhost:4444/wd/hub";
@@ -24,6 +26,25 @@ public class SimpleTest {
         this.driver.get("https://google.com/");
 
         try{Thread.sleep(10000);}catch(Exception e){}
+
+        WebElement input = this.driver.findElement(new By.ByCssSelector(".gLFyf.gsfi"));
+
+        try{Thread.sleep(10000);}catch(Exception e){}
+
+        input.click();
+
+        try{Thread.sleep(10000);}catch(Exception e){}
+
+        input.sendKeys("Skillfactory");
+
+        try{Thread.sleep(10000);}catch(Exception e){}
+
+        WebElement submit = this.driver.findElement(new By.ByCssSelector(".gNO89b"));
+        submit.click();
+
+        try{Thread.sleep(10000);}catch(Exception e){}
+
+
     }
 
     @AfterClass
