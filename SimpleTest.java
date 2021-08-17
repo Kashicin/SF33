@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.net.URL;
-\\java -Dwebdriver.chrome.driver=D:\Git\Maven-id\chromedriver.exe -jar D:\Git\Maven-id\selenium-server-standalone-3.141.59.jar
+//java -Dwebdriver.chrome.driver=D:\Git\Maven-id\chromedriver.exe -jar D:\Git\Maven-id\selenium-server-standalone-3.141.59.jar
 public class SimpleTest {
     public RemoteWebDriver driver;
     private static final String SELENIUM_URL = "http://localhost:4444/wd/hub";
